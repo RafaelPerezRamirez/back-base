@@ -1,0 +1,52 @@
+.logo {
+    width: 100%;
+    height: 70px;
+    background: white;
+    border-bottom: solid 2px #ee711c;
+}
+
+.content-logo {
+    width: 85%;
+    margin: 0 auto;
+    position: relative;
+    max-width: 980px;
+    height: 100%;
+}
+
+.logo img {
+    width: 300px;
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
+}
+
+.main-container {
+    width: 85%;
+    max-width: 980px;
+    margin: 0 auto;
+    display: flex;
+    padding-top: 60px;
+    justify-content: space-between;
+}
+
+.main-container app-form {
+    width: 30%;
+}
+
+.main-container app-transactions {
+    width: 65%;
+}
+
+@media screen and (max-width: 801px) {
+    .main-container {
+        display: block;
+    }
+    .main-container app-transfer-form {
+        width: 100%;
+        margin-bottom: 30px;
+        display: block;
+    }
+    .main-container app-transactions {
+        width: 100%;
+    }
+}

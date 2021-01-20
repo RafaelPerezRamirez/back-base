@@ -1,0 +1,87 @@
+.panel-transactions {
+    background: white;
+    padding: 15px;
+    height: 67vh;
+    overflow-y: scroll;
+}
+
+.transaction-item {
+    display: flex;
+    align-items: center;
+    border: solid 1.5px #cdcdcd;
+    border-bottom: none;
+    padding: 10px 0px;
+    position: relative
+}
+
+.transaction-item::before {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 105%;
+    top: -1px;
+    left: -1px;
+}
+
+.transaction-item.red::before {
+    background: #c12315;
+}
+
+.transaction-item.pink::before {
+    background: #d51673;
+}
+
+.transaction-item.blue::before {
+    background: #18a57c;
+}
+
+.transaction-item.yellow::before {
+    background: #c89700;
+}
+
+.transaction-item.orange::before {
+    background: #0f7fae;
+}
+
+.date {
+    width: 20%;
+}
+
+.image {
+    width: 10%;
+}
+
+.info-transaction {
+    width: 60%;
+}
+
+.mount {
+    widows: 10%;
+}
+
+.image img {
+    width: 32px;
+    -webkit-filter: grayscale(100%);
+    /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
+.info-transaction div {
+    line-height: 16px;
+    color: #4b4944;
+}
+
+@media screen and (max-width: 801px) {
+    .date {
+        width: 25%;
+    }
+    .image {
+        width: 20%;
+    }
+    .info-transaction {
+        width: 35%;
+    }
+    .mount {
+        width: 20%;
+    }
+}

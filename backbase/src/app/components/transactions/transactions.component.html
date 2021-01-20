@@ -1,0 +1,17 @@
+<div class="transactions-content">
+    <div class="header-component header-section">
+        <img src="assets/icons/suitcase.png">Recent Transactions
+    </div>
+    <div class="panel-transactions">
+        <app-filter></app-filter>
+        <div *ngFor="let transaction of data; let i = index" class="transaction-item" [ngClass]="randomColors[i]">
+            <div class="date text-center small">{{ transaction.dates.valueDate | date: 'MMM dd' }}</div>
+            <div class="image"><img src='{{ "../../../assets/icons/" + images[i] + ".png" }}'></div>
+            <div class="info-transaction">
+                <div class="small bolder">{{ transaction.merchant ?  transaction.merchant.name : null}}</div>
+                <div class="v_small">{{ transaction.transaction ? transaction.transaction.type : null }}</div>
+            </div>
+            <div class="mount"> - {{transaction.transaction ? transaction.transaction.amountCurrency.amount : null}} </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="input-content">
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label form-group">
+        <label class="small bolder">Search by typing</label>
+        <input 
+            name="term" 
+            type="text" 
+            class="mdl-textfield__input small"
+            (input)="search($event.target.value)">
+    </div>
+</div>

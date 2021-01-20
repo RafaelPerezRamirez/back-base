@@ -1,0 +1,25 @@
+<div class="form-component">
+    <div class="header-component header-section"><img src="assets/icons/exchange.png">Make a Transfer</div>
+    <div class="form-container">
+        <form ngNativeValidate [formGroup]="group" (ngSubmit)="sendTransaction()">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label form-group">
+                <label class="small bolder">FROM ACCOUNT</label>
+                <input disabled [(ngModel)]="property" formControlName="from" name="from" type="text" class="mdl-textfield__input small" required>
+                <span class="mdl-textfield__error color-light-gray"><i class="bbva-icon-attention color-light-red font-16 sub"></i> This field is required</span>
+            </div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label form-group">
+                <label class="small bolder">TO ACCOUNT</label>
+                <input formControlName="merchant" name="to" type="text" class="mdl-textfield__input small" required>
+                <span class="mdl-textfield__error color-light-gray"><i class="bbva-icon-attention color-light-red font-16 sub"></i> This field is required</span>
+            </div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label form-group">
+                <label class="small bolder">AMOUNT</label>
+                <input formControlName="amount" name="amount" type="text" class="mdl-textfield__input small" pattern="^(0|[1-9][0-9]*)$" required>
+                <span class="mdl-textfield__error color-light-gray"><i class="bbva-icon-attention color-light-red font-16 sub"></i> This field is required && only accept numbers</span>
+            </div>
+            <div class="text-right button-content">
+                <button [disabled]="group.invalid" [class.inactive]="group.invalid" type="submit" class="button">SUBMIT</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+.input-content {
+    width: 250px;
+}
+.mdl-textfield{
+    padding: initial;
+    margin-bottom: 10px;
+    .mdl-textfield__input{
+        border-bottom: solid 1px rgb(121, 121, 121);
+    }
+}
